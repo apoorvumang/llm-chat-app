@@ -1,0 +1,12 @@
+{
+  "endpoints": [
+    {
+      "id": "mercury-2",
+      "name": "Mercury 2",
+      "baseUrl": "https://api.inceptionlabs.ai/v1",
+      "modelName": "mercury-2",
+      "extraParams": []
+    }
+  ],
+  "userColor": "#374151"
+}

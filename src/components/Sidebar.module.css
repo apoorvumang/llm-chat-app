@@ -1,0 +1,157 @@
+.sidebar {
+    width: 260px;
+    background-color: var(--secondary);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+}
+
+.newChatBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    margin-bottom: 1.5rem;
+}
+
+.newChatBtn:hover {
+    background-color: var(--primary-hover);
+}
+
+.sectionTitle {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+}
+
+.chatList {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.chatItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all 0.2s;
+    position: relative;
+}
+
+.chatItem:hover {
+    background-color: var(--secondary-hover);
+    color: var(--foreground);
+}
+
+.chatItem.active {
+    background-color: var(--secondary-hover);
+    color: var(--foreground);
+}
+
+.chatTitle {
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+
+.chatActions {
+    position: absolute;
+    right: 0.75rem;
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    background: linear-gradient(to right, transparent, var(--secondary-hover) 20%);
+    padding-left: 2rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.chatItem:hover .chatActions {
+    opacity: 1;
+}
+
+.chatItem.active .chatActions {
+    background: linear-gradient(to right, transparent, var(--secondary-hover) 20%);
+}
+
+.editBtn,
+.deleteBtn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.editBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #3b82f6;
+}
+
+.deleteBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ef4444;
+}
+
+.footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.editInput {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    width: 100%;
+    outline: none;
+}
+
+.editInput:focus {
+    border-color: var(--primary);
+}
+
+.settingsBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.settingsBtn:hover {
+    background-color: var(--secondary-hover);
+    color: var(--foreground);
+}

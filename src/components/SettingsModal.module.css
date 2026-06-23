@@ -1,0 +1,432 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal {
+    background-color: #1e293b;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 600px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.closeBtn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.closeBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.content {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.hint {
+    display: block;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 0.25rem;
+    font-weight: normal;
+}
+
+.textarea {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    color: white;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.addBtn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.addBtn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.endpointsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.endpointCard {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+
+.endpointHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.endpointNameInput {
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    width: 100%;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.endpointNameInput:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.removeBtn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    opacity: 0.7;
+    transition: all 0.2s;
+}
+
+.removeBtn:hover {
+    opacity: 1;
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+.endpointFields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.fieldGroup label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.4rem;
+    padding: 0.6rem;
+    color: white;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.inputWithButton {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.toggleBtn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    width: 36px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggleBtn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.extraParamsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.addParamBtn {
+    font-size: 0.75rem;
+    color: var(--primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.addParamBtn:hover {
+    text-decoration: underline;
+}
+
+.paramRow {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.paramInput {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    color: white;
+    font-size: 0.85rem;
+    flex: 1;
+}
+
+.removeParamBtn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.removeParamBtn:hover {
+    color: #ef4444;
+}
+
+.footer {
+    padding: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.cancelBtn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cancelBtn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.saveBtn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.saveBtn:hover {
+    opacity: 0.9;
+}
+
+/* Color Palette Styles */
+.colorGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.colorSwatch {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+    position: relative;
+}
+
+.colorSwatch:hover {
+    transform: scale(1.1);
+}
+
+.selectedSwatch {
+    border-color: white;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.selectedSwatch::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Read-only endpoint styles */
+.readOnlyCard {
+    opacity: 0.85;
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.readOnlyCard .input:disabled {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    cursor: not-allowed;
+}
+
+.lockIcon {
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 0.5rem;
+}
+
+.endpointNameDisplay {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.25rem;
+}
+
+.readOnlyBadge {
+    font-size: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sectionHint {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 1rem;
+    margin-top: -0.5rem;
+}
+
+.emptyState {
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+/* Server endpoint card styles */
+.serverCard {
+    border-color: rgba(99, 102, 241, 0.3);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.getKeyLink {
+    float: right;
+    font-size: 0.75rem;
+    color: var(--primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: normal;
+}
+
+.getKeyLink:hover {
+    text-decoration: underline;
+}

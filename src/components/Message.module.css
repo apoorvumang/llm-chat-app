@@ -1,0 +1,369 @@
+.messageWrapper {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.userWrapper {
+    flex-direction: row-reverse;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.userAvatar {
+    background-color: var(--primary);
+    color: white;
+}
+
+.botAvatar {
+    background-color: var(--secondary-hover);
+    color: #10b981;
+}
+
+.messageContent {
+    padding: 1rem;
+    border-radius: 1rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    max-width: 80%;
+}
+
+.userContent {
+    background-color: var(--primary);
+    color: white;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.botContent {
+    background-color: var(--secondary);
+    color: var(--foreground);
+    border-bottom-left-radius: 0.25rem;
+}
+
+.markdown p {
+    margin-bottom: 0.75rem;
+}
+
+.markdown p:last-child {
+    margin-bottom: 0;
+}
+
+.markdown ul,
+.markdown ol {
+    margin-left: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.codeBlockWrapper {
+    margin: 0.75rem 0;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    background-color: #0f172a;
+}
+
+.codeHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--border);
+}
+
+.language {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.copyBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: color 0.2s;
+}
+
+.copyBtn:hover {
+    color: var(--foreground);
+}
+
+.codeBlock {
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    background: transparent;
+    border: none;
+}
+
+.inlineCode {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+}
+
+.metrics {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    text-align: right;
+    opacity: 0.7;
+}
+
+.userMessageGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.userText {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.userCodeBlock {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    overflow-x: auto;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+}
+
+.userCodeBlock code {
+    background: none;
+    padding: 0;
+    font-family: inherit;
+    color: inherit;
+}
+
+.userInlineCode {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.25rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+}
+
+
+.actionButtons {
+    display: flex;
+    gap: 0.5rem;
+    align-self: flex-end;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.userWrapper:hover .actionButtons {
+    opacity: 1;
+}
+
+.editBtn,
+.rerunBtn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.editBtn:hover,
+.rerunBtn:hover {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.editContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 300px;
+}
+
+.editTextarea {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    color: white;
+    padding: 0.5rem;
+    font-family: inherit;
+    font-size: inherit;
+    resize: vertical;
+    min-height: 60px;
+}
+
+.editActions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.saveBtn,
+.cancelBtn {
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border: none;
+}
+
+.saveBtn {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s;
+}
+
+.saveBtn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.cancelBtn {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cancelBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Table Styles */
+.tableWrapper {
+    overflow-x: auto;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+}
+
+.markdown table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.markdown th,
+.markdown td {
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+}
+
+.markdown th {
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+}
+
+.markdown tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.metricSeparator {
+    margin: 0 0.5rem;
+    opacity: 0.5;
+}
+
+.toolCalls {
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.toolCall {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #9ca3af;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    width: fit-content;
+}
+
+.toolIcon {
+    font-size: 1rem;
+}
+
+.toolText {
+    font-weight: 500;
+}
+
+/* Reasoning Content Styles */
+.reasoningBlock {
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: rgba(139, 92, 246, 0.05);
+}
+
+.reasoningToggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    background: transparent;
+    border: none;
+    color: #a78bfa;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+.reasoningToggle:hover {
+    background-color: rgba(139, 92, 246, 0.1);
+}
+
+.reasoningContent {
+    padding: 0.75rem;
+    margin: 0;
+    font-size: 0.85rem;
+    font-family: inherit;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: var(--text-muted);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-top: 1px solid var(--border);
+    max-height: 300px;
+    overflow-y: auto;
+}
